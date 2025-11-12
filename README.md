@@ -3,3 +3,4 @@
 -installed tailwindcss and daisyui
 -navbar component
 -installed react-router-dom
+-Browser Router, Routes, children route, footer component, body component, outlet
