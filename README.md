@@ -1,3 +1,5 @@
 -Created a vite+react application
 -initialised git
 -installed tailwindcss and daisyui
+-navbar component
+-installed react-router-dom
