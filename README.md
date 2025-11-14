@@ -4,3 +4,12 @@
 -navbar component
 -installed react-router-dom
 -Browser Router, Routes, children route, footer component, body component, outlet
+
+- create a Login page
+- installed axios and used it to fetch login api from backend
+- installed cors in backend for perfect connection between frontend and backend
+  -installed redux toolkit and react redux
+  -configured store, provider in app.jsx, created user slice, added reducer to the store
+- added redux devtools in chrome
+- Navbar updated after user log in, profile picture and firstName\
+- created a constant file for base url and components folder for all components.
