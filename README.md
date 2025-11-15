@@ -13,3 +13,5 @@
 - added redux devtools in chrome
 - Navbar updated after user log in, profile picture and firstName\
 - created a constant file for base url and components folder for all components.
+- if not logged in, then feed is not accessible
+- if logged in, then /login is not accessible
