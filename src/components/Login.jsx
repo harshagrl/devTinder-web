@@ -11,6 +11,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector((store) => store.user);
+
   useEffect(() => {
     if (userData) {
       navigate("/");
@@ -27,6 +28,7 @@ const Login = () => {
         { withCredentials: true }
       );
       dispatch(addUser(res.data));
+
       return navigate("/");
     } catch (error) {
       setError(error?.response?.data || "Login failed");

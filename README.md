@@ -15,3 +15,5 @@
 - created a constant file for base url and components folder for all components.
 - if not logged in, then feed is not accessible
 - if logged in, then /login is not accessible
+- built logout
+- error is shown if login details not valid
