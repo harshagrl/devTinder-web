@@ -1,41 +1,43 @@
 import axios from "axios";
-import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { addConnection } from "../utils/connectionSlice";
+import { addRequest } from "../utils/requestSlice";
+import { useEffect } from "react";
 
-const Connections = () => {
+const Requests = () => {
   const dispatch = useDispatch();
-  const connections = useSelector((store) => store.connection);
-  const fetchConnections = async () => {
+  const requests = useSelector((store) => store.request);
+  const fetchRequests = async () => {
     try {
-      const res = await axios.get(BASE_URL + "/user/connections", {
+      const res = await axios.get(BASE_URL + "/user/request/received", {
         withCredentials: true,
       });
-
-      dispatch(addConnection(res.data.data));
+      dispatch(addRequest(res?.data?.data));
     } catch (err) {
       console.error(err.message);
     }
   };
+
   useEffect(() => {
-    fetchConnections();
+    fetchRequests();
   }, []);
 
-  if (!connections) return;
-  if (connections.length === 0)
+  if (!requests) return;
+  if (requests.length === 0)
     return (
       <h1 className="text-center my-10 text-2xl font-bold">
-        No Connections found
+        No Requests found
       </h1>
     );
   return (
     <div className="text-center">
-      <h1 className="text-3xl font-bold my-4 font-serif">Connections</h1>
+      <h1 className="text-3xl font-bold my-4 font-serif">
+        Connection Requests
+      </h1>
       <div className="flex flex-wrap gap-4 justify-center my-4">
-        {connections.map((connection) => {
+        {requests.map((request) => {
           const { _id, firstName, lastName, photoUrl, age, gender, about } =
-            connection;
+            request.fromUserId;
           return (
             <div
               className="flex gap-4 w-1/2 p-5 rounded-lg bg-base-300 shadow-lg"
@@ -63,4 +65,4 @@ const Connections = () => {
   );
 };
 
-export default Connections;
+export default Requests;
