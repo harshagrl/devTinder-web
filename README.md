@@ -17,3 +17,6 @@
 - if logged in, then /login is not accessible
 - built logout
 - error is shown if login details not valid
+- feed page is built
+- edit profile page is built
+- connections page is built
