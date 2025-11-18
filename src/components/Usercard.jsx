@@ -1,6 +1,12 @@
 const Usercard = ({ user }) => {
   const { firstName, lastName, about, age, gender, skills, photoUrl } =
     user || {};
+  if (!user)
+    return (
+      <h1 className="text-3xl font-bold font-serif text-red-600">
+        No More Users found
+      </h1>
+    );
   return (
     <div className="card bg-base-300 w-80 h-155 shadow-sm">
       <figure>
