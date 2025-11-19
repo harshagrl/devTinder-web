@@ -20,3 +20,6 @@
 - feed page is built
 - edit profile page is built
 - connections page is built
+- connection requests page is built
+- accept/reject functionality added in connection request page
+- interested/ignore feature in feed page
