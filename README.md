@@ -23,3 +23,4 @@
 - connection requests page is built
 - accept/reject functionality added in connection request page
 - interested/ignore feature in feed page
+- signup page
